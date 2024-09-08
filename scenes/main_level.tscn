@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://6r7ymcjgtvw2"]
 
 [ext_resource type="Texture2D" uid="uid://6ivssw64oi6i" path="res://assets/backgrounds/map_placeholder.png" id="1_usxbx"]
-[ext_resource type="Texture2D" uid="uid://bwujfcy1wc7nn" path="res://assets/backgrounds/sheep_placeholder.png" id="2_kt0qm"]
+[ext_resource type="Texture2D" uid="uid://bwujfcy1wc7nn" path="res://assets/characters/sheep_placeholder.png" id="2_kt0qm"]
 [ext_resource type="PackedScene" uid="uid://b32u6fmomjayt" path="res://scenes/player.tscn" id="2_r2vb0"]
 [ext_resource type="Script" path="res://scripts/movement/sheep_movement.gd" id="3_1wvrr"]
 
@@ -30,6 +30,7 @@ texture = ExtResource("1_usxbx")
 position = Vector2(579, 330)
 
 [node name="Dog" parent="." instance=ExtResource("2_r2vb0")]
+position = Vector2(498, 211)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(554, 275)

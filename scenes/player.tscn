@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b32u6fmomjayt"]
 
-[ext_resource type="Texture2D" uid="uid://bc7dgxe5hm47g" path="res://assets/Dog_medium.png" id="1_6gdcy"]
+[ext_resource type="Texture2D" uid="uid://bc7dgxe5hm47g" path="res://assets/characters/Dog_medium.png" id="1_6gdcy"]
 [ext_resource type="Script" path="res://scripts/movement/player.gd" id="1_sjhcc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2mi77"]
