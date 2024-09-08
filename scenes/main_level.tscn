@@ -30,15 +30,15 @@ texture = ExtResource("1_usxbx")
 position = Vector2(579, 330)
 
 [node name="Dog" parent="." instance=ExtResource("2_r2vb0")]
-position = Vector2(498, 211)
+position = Vector2(499, 211)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Sheep" type="CharacterBody2D" parent="."]
 position = Vector2(554, 275)
 scale = Vector2(0.1, 0.1)
 script = ExtResource("3_1wvrr")
 
-[node name="SheepPlaceholder" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="SheepPlaceholder" type="AnimatedSprite2D" parent="Sheep"]
 sprite_frames = SubResource("SpriteFrames_6x4eo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sheep"]
 shape = SubResource("CircleShape2D_qsu27")

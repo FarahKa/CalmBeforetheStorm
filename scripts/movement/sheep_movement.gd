@@ -29,7 +29,7 @@ const TOLERANCE = 4.0
 
 
 func update_target_position():
-	var target_vector = Vector2(randf_range(-32, 32), randf_range(-32, 32))
+	var target_vector = Vector2(randf_range(-100, 100), randf_range(-100, 100))
 	target_position = start_position + target_vector
 
 func is_at_target_position(): 
