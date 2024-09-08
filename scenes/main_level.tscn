@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://6r7ymcjgtvw2"]
+
+[ext_resource type="Texture2D" uid="uid://6ivssw64oi6i" path="res://assets/backgrounds/map_placeholder.png" id="1_usxbx"]
+[ext_resource type="Texture2D" uid="uid://bwujfcy1wc7nn" path="res://assets/backgrounds/sheep_placeholder.png" id="2_kt0qm"]
+[ext_resource type="Script" path="res://scripts/movement/sheep_movement.gd" id="3_1wvrr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6x4eo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kt0qm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qsu27"]
+
+[node name="Map" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_usxbx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(579, 330)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(554, 275)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("3_1wvrr")
+
+[node name="SheepPlaceholder" type="AnimatedSprite2D" parent="CharacterBody2D"]
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_6x4eo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_qsu27")
