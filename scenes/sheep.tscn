@@ -25,4 +25,5 @@ script = ExtResource("1_x08my")
 sprite_frames = SubResource("SpriteFrames_6x4eo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(14.6001, 13)
 shape = SubResource("CircleShape2D_qsu27")
