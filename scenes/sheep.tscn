@@ -19,6 +19,9 @@ animations = [{
 [node name="Sheep" type="CharacterBody2D"]
 position = Vector2(554, 275)
 scale = Vector2(0.1, 0.1)
+collision_layer = 0
+motion_mode = 1
+platform_floor_layers = 4294967040
 script = ExtResource("1_x08my")
 
 [node name="SheepPlaceholder" type="AnimatedSprite2D" parent="."]

@@ -24,19 +24,10 @@ enum {
 var state = IDLE
 
 const ACCELERATION = 300
-const MAX_SPEED = 50
+const MAX_SPEED = 20
 const TOLERANCE = 4.0
-const SPEED_AWAY =  100
+const SPEED_AWAY =  50
 
-
-
-func update_target_position():
-	var target_vector = Vector2(randf_range(-100, 100), randf_range(-100, 100))
-	target_position = start_position + target_vector
-
-func is_at_target_position(): 
-	# Stop moving when at target +/- tolerance
-	return (target_position - global_position).length() < TOLERANCE
 
 func _physics_process(delta):
 	match state:
@@ -45,16 +36,21 @@ func _physics_process(delta):
 			# Maybe wait for X seconds with a timer before moving on
 			update_target_position()
 		WANDER:
+			if velocity == Vector2.ZERO:
+				state = IDLE
+				pass
+				
+			print(velocity)
+			
 			accelerate_to_point(target_position, ACCELERATION * delta)
 			#print(global_position.distance_to(dog.global_position))
 			#print(velocity)
-			if velocity == Vector2.ZERO:
-				update_target_position()
-				velocity=Vector2(20,20)
+
 				
 			if global_position.distance_to(dog.global_position) < 100:
 				var direction = global_position.direction_to(dog.global_position)
 				velocity = -direction * SPEED_AWAY
+				target_position = global_position - direction 
 				
 			
 			if is_at_target_position():
@@ -62,11 +58,18 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+func update_target_position():
+	var target_vector = Vector2(randf_range(-200, 200), randf_range(-200, 200))
+	target_position = start_position + target_vector
+
+func is_at_target_position(): 
+	# Stop moving when at target +/- tolerance
+	return (target_position - global_position).length() < TOLERANCE
+
 func accelerate_to_point(point, acceleration_scalar):
 	var direction = (point - global_position).normalized()
 	var acceleration_vector = direction * acceleration_scalar
-	accelerate(acceleration_vector)
-
-func accelerate(acceleration_vector):
 	velocity += acceleration_vector
 	velocity = velocity.limit_length(MAX_SPEED)
+
+	
