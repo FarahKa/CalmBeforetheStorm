@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var start_position
 var target_position 
-@onready var dog: CharacterBody2D = $"../Dog"
+@onready var dog: CharacterBody2D = $"../../Dog"
 
 func _ready() -> void:
 	start_position = global_position

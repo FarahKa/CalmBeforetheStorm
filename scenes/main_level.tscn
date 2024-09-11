@@ -19,39 +19,32 @@ position = Vector2(579, 330)
 position = Vector2(983, 274)
 scale = Vector2(0.8, 0.8)
 
-[node name="Sheep" parent="." instance=ExtResource("3_1rmii")]
-scale = Vector2(0.05, 0.05)
-
-[node name="Sheep2" parent="." instance=ExtResource("3_1rmii")]
-position = Vector2(378, 394)
-scale = Vector2(0.05, 0.05)
-
-[node name="Sheep3" parent="." instance=ExtResource("3_1rmii")]
-position = Vector2(429, 288)
-scale = Vector2(0.05, 0.05)
-
-[node name="Sheep4" parent="." instance=ExtResource("3_1rmii")]
-position = Vector2(405, 343)
-scale = Vector2(0.05, 0.05)
-
-[node name="Sheep5" parent="." instance=ExtResource("3_1rmii")]
-position = Vector2(330, 337)
-scale = Vector2(0.05, 0.05)
-
-[node name="Sheep6" parent="." instance=ExtResource("3_1rmii")]
-position = Vector2(378, 262)
-scale = Vector2(0.05, 0.05)
-
-[node name="Sheep7" parent="." instance=ExtResource("3_1rmii")]
-position = Vector2(383, 178)
-scale = Vector2(0.05, 0.05)
-
-[node name="Sheep8" parent="." instance=ExtResource("3_1rmii")]
-position = Vector2(308, 250)
-scale = Vector2(0.05, 0.05)
-
-[node name="Sheep9" parent="." instance=ExtResource("3_1rmii")]
-position = Vector2(313, 183)
-scale = Vector2(0.05, 0.05)
-
 [node name="Node" type="Node" parent="."]
+
+[node name="Sheepz" type="Node" parent="."]
+
+[node name="Sheep" parent="Sheepz" instance=ExtResource("3_1rmii")]
+
+[node name="Sheep2" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(378, 394)
+
+[node name="Sheep3" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(429, 288)
+
+[node name="Sheep4" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(405, 343)
+
+[node name="Sheep5" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(330, 337)
+
+[node name="Sheep6" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(378, 262)
+
+[node name="Sheep7" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(383, 178)
+
+[node name="Sheep8" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(308, 250)
+
+[node name="Sheep9" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(313, 183)
