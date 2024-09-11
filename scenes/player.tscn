@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://bc7dgxe5hm47g" path="res://assets/characters/Dog_medium.png" id="1_6gdcy"]
 [ext_resource type="Script" path="res://scripts/movement/player.gd" id="1_sjhcc"]
-[ext_resource type="Script" path="res://scenes/animated_sprite_2d.gd" id="3_8xlgt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2mi77"]
 atlas = ExtResource("1_6gdcy")
@@ -80,6 +79,8 @@ animations = [{
 "speed": 9.0
 }]
 
+[sub_resource type="GDScript" id="GDScript_xwh8i"]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c6pha"]
 radius = 8.0
 height = 28.0
@@ -92,7 +93,7 @@ position = Vector2(5, -19)
 sprite_frames = SubResource("SpriteFrames_no4qs")
 animation = &"idle"
 autoplay = "idle"
-script = ExtResource("3_8xlgt")
+script = SubResource("GDScript_xwh8i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -11)
