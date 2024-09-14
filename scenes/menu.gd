@@ -1,5 +1,7 @@
 extends Control
 
+func _physics_process(_delta):
+	$ColorRect/AnimatedSprite2D.play("default")
 
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_level.tscn")

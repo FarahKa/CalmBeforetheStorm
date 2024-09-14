@@ -1,7 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxu5f63xq7ml0"]
+[gd_scene load_steps=5 format=3 uid="uid://bxu5f63xq7ml0"]
 
 [ext_resource type="Script" path="res://scenes/menu.gd" id="1_r70qd"]
 [ext_resource type="Texture2D" uid="uid://difdy3f6og566" path="res://assets/characters/doggo/idle1.png" id="2_uw7ly"]
+[ext_resource type="Texture2D" uid="uid://c1kwp2jtw8e7u" path="res://assets/characters/doggo/idle2.png" id="3_j8bmg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7705u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uw7ly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j8bmg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -18,14 +33,10 @@ offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.788607, 0.788607, 0.788607, 1)
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect"]
-layout_mode = 0
-offset_left = 481.0
-offset_top = 118.0
-offset_right = 1331.0
-offset_bottom = 608.0
-texture = ExtResource("2_uw7ly")
-expand_mode = 1
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ColorRect"]
+position = Vector2(925, 382)
+scale = Vector2(0.803918, 0.803918)
+sprite_frames = SubResource("SpriteFrames_7705u")
 flip_h = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
