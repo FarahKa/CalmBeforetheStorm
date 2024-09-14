@@ -81,15 +81,16 @@ script = ExtResource("1_sjhcc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-8, -15)
-scale = Vector2(0.0805005, 0.0631164)
+scale = Vector2(0.114235, 0.089566)
 sprite_frames = SubResource("SpriteFrames_no4qs")
 animation = &"idle_bark"
 autoplay = "idle"
 script = SubResource("GDScript_xwh8i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -11)
+position = Vector2(1, -11)
 rotation = 1.5708
+scale = Vector2(1.25746, 1.92419)
 shape = SubResource("CapsuleShape2D_c6pha")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
