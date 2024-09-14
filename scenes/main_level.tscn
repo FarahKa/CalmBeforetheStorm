@@ -1,7 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://6r7ymcjgtvw2"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_evwuk"]
-
 [ext_resource type="Texture2D" uid="uid://bjsplvoybi4nm" path="res://assets/backgrounds/clouds/cloud1.png" id="2_pi265"]
 [ext_resource type="PackedScene" uid="uid://b32u6fmomjayt" path="res://scenes/player.tscn" id="2_r2vb0"]
 [ext_resource type="PackedScene" uid="uid://ba07js7tksjmk" path="res://scenes/sheep.tscn" id="3_1rmii"]
@@ -19,8 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dqjgm0gs008nd" path="res://assets/backgrounds/clouds/cloud10.png" id="11_pwur0"]
 [ext_resource type="Texture2D" uid="uid://cb8mubqeotu0e" path="res://assets/backgrounds/clouds/cloud11.png" id="12_1t2vq"]
 [ext_resource type="Texture2D" uid="uid://c13epi8d1anmg" path="res://assets/backgrounds/clouds/cloud12.png" id="13_fycvi"]
-
-[ext_resource type="Texture2D" uid="uid://x0k32ext8s27" path="res://assets/backgrounds/MapbasIC.png" id="14_j08w7"]
+[ext_resource type="Texture2D" uid="uid://c542d7iu52acb" path="res://assets/backgrounds/MapbasIC.png" id="14_j08w7"]
 
 [sub_resource type="Animation" id="Animation_vj6p1"]
 length = 0.001
