@@ -7,17 +7,20 @@ extends CharacterBody2D
 var input_direction
 var direction
 var input_action
+var bark_noise
+var number_barked
 	
 func _physics_process(_delta):
 	get_input()
 	move_and_slide()
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction > 0 :
-		$AnimatedSprite2D.flip_h = true
-	elif direction < 0 :
 		$AnimatedSprite2D.flip_h = false
+	elif direction < 0 :
+		$AnimatedSprite2D.flip_h = true
 	if input_action :
 		var is_barking = "true"
+		$AudioStreamPlayer.play()
 		if direction == 0 :
 			$AnimatedSprite2D.play("idle_bark")
 		elif direction != 0 :
