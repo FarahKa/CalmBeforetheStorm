@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dj4nkddw0c136" path="res://assets/characters/doggo/runboi2.png" id="7_u4a6r"]
 [ext_resource type="Texture2D" uid="uid://c6fomh60d8by4" path="res://assets/characters/doggo/runboi1BORK.png" id="8_s1pqg"]
 [ext_resource type="Texture2D" uid="uid://csbexbyvvxcw0" path="res://assets/characters/doggo/runboi2BORK.png" id="9_0a2xg"]
-[ext_resource type="AudioStream" uid="uid://bm3ur31jr408v" path="res://assets/sounds/bark1.mp3" id="10_p1w1k"]
+[ext_resource type="AudioStream" uid="uid://ddrv2mfw1cm5c" path="res://assets/sounds/bark1.mp3" id="10_p1w1k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_no4qs"]
 animations = [{

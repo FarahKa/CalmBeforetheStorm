@@ -2,7 +2,9 @@
 
 importer="mp3"
 type="AudioStreamMP3"
+
 uid="uid://b60vnvdovl7hy"
+
 path="res://.godot/imported/sheep-pixabay.mp3-b16c7c0b26e0cb86331b12b37cd3fbf6.mp3str"
 
 [deps]
@@ -12,8 +14,14 @@ dest_files=["res://.godot/imported/sheep-pixabay.mp3-b16c7c0b26e0cb86331b12b37cd
 
 [params]
 
+<<<<<<< HEAD
 loop=true
 loop_offset=0.0
 bpm=0.0
+=======
+loop=false
+loop_offset=0
+bpm=0
+>>>>>>> d9f38d6164c4616bc97424e34acd9a9d2d3cc83e
 beat_count=0
 bar_beats=4
