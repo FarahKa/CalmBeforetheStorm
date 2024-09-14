@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://6r7ymcjgtvw2"]
+[gd_scene load_steps=12 format=3 uid="uid://6r7ymcjgtvw2"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_evwuk"]
 [ext_resource type="Texture2D" uid="uid://6ivssw64oi6i" path="res://assets/backgrounds/map_placeholder.png" id="1_usxbx"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://uriufafemkdi" path="res://scenes/killzone.tscn" id="4_ih5r6"]
 [ext_resource type="Texture2D" uid="uid://dkhoca1vi47tl" path="res://assets/characters/moutonalpha/spritealphamoutonWALK1.png" id="5_1py2r"]
 [ext_resource type="Texture2D" uid="uid://cf1b528ehnvgv" path="res://assets/characters/moutonalpha/spritealphamoutonWALK2.png" id="6_ng3im"]
+[ext_resource type="AudioStream" uid="uid://b60vnvdovl7hy" path="res://assets/sounds/sheep-pixabay.mp3" id="8_ad4dk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tb8ti"]
 animations = [{
@@ -227,6 +228,10 @@ position = Vector2(219, 655)
 position = Vector2(874, -139)
 rotation = 4.7027
 shape = SubResource("WorldBoundaryShape2D_74emq")
+
+[node name="sheepnoises" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_ad4dk")
+autoplay = true
 
 [editable path="Sheepz/Sheep"]
 [editable path="Sheepz/Sheep10"]
