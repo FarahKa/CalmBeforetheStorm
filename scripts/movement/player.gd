@@ -5,7 +5,9 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var input_direction
-
+var direction
+var input_action
+	
 func _physics_process(_delta):
 	get_input()
 	move_and_slide()
@@ -14,15 +16,22 @@ func _physics_process(_delta):
 		$AnimatedSprite2D.flip_h = true
 	elif direction < 0 :
 		$AnimatedSprite2D.flip_h = false
-	
-	if direction == 0 :
-		$AnimatedSprite2D.play("idle")
+	if input_action :
+		var is_barking = "true"
+		if direction == 0 :
+			$AnimatedSprite2D.play("idle_bark")
+		elif direction != 0 :
+			$AnimatedSprite2D.play("run_bark")
 	else :
-		$AnimatedSprite2D.play("run")
-
-
-
+		if direction == 0 :
+			$AnimatedSprite2D.play("idle")
+		else :
+			$AnimatedSprite2D.play("run")
 
 func get_input():
 	input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = input_direction * speed
+	input_action = Input.is_action_pressed("ui_select")
+	
+	
+	print (input_action)

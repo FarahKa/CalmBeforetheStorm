@@ -40,7 +40,7 @@ func _physics_process(delta):
 				state = IDLE
 				pass
 				
-			print(velocity)
+			#print(velocity)
 			
 			accelerate_to_point(target_position, ACCELERATION * delta)
 			#print(global_position.distance_to(dog.global_position))
