@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b32u6fmomjayt"]
+[gd_scene load_steps=14 format=3 uid="uid://b32u6fmomjayt"]
 
 [ext_resource type="Script" path="res://scripts/movement/player.gd" id="1_sjhcc"]
 [ext_resource type="Texture2D" uid="uid://difdy3f6og566" path="res://assets/characters/doggo/idle1.png" id="2_2qoaj"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dj4nkddw0c136" path="res://assets/characters/doggo/runboi2.png" id="7_u4a6r"]
 [ext_resource type="Texture2D" uid="uid://c6fomh60d8by4" path="res://assets/characters/doggo/runboi1BORK.png" id="8_s1pqg"]
 [ext_resource type="Texture2D" uid="uid://csbexbyvvxcw0" path="res://assets/characters/doggo/runboi2BORK.png" id="9_0a2xg"]
+[ext_resource type="AudioStream" uid="uid://bm3ur31jr408v" path="res://assets/sounds/bark1.mp3" id="10_p1w1k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_no4qs"]
 animations = [{
@@ -90,3 +91,6 @@ script = SubResource("GDScript_xwh8i")
 position = Vector2(-1, -11)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_c6pha")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_p1w1k")
