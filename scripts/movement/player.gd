@@ -13,9 +13,9 @@ func _physics_process(_delta):
 	move_and_slide()
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction > 0 :
-		$AnimatedSprite2D.flip_h = true
-	elif direction < 0 :
 		$AnimatedSprite2D.flip_h = false
+	elif direction < 0 :
+		$AnimatedSprite2D.flip_h = true
 	if input_action :
 		var is_barking = "true"
 		if direction == 0 :

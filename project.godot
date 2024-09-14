@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Good_Boy_Simulator"
-run/main_scene="res://scenes/main_level.tscn"
+run/main_scene="res://scenes/Menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[gui]
+
+theme/custom_font="res://assets/fonts/otf/Basteleur-Moonlight.otf"
 
 [rendering]
 
