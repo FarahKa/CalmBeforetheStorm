@@ -34,4 +34,4 @@ func get_input():
 	input_action = Input.is_action_pressed("ui_select")
 	
 	
-	print (input_action)
+	#print (input_action)

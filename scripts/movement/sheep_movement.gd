@@ -3,6 +3,7 @@ extends CharacterBody2D
 var start_position
 var target_position 
 @onready var dog: CharacterBody2D = $"../../Dog"
+@onready var sheep_placeholder: AnimatedSprite2D = $SheepPlaceholder
 
 func _ready() -> void:
 	start_position = global_position
@@ -55,7 +56,10 @@ func _physics_process(delta):
 			
 			if is_at_target_position():
 				state = IDLE
-
+	if target_position.x < self.position.x:
+		sheep_placeholder.flip_h = false
+	elif target_position.x > self.position.x:
+		sheep_placeholder.flip_h = true
 	move_and_slide()
 
 func update_target_position():

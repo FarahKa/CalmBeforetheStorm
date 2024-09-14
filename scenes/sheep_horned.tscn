@@ -1,17 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://ba07js7tksjmk"]
+[gd_scene load_steps=6 format=3 uid="uid://b4tmdhyil51yx"]
 
-[ext_resource type="Script" path="res://scripts/movement/sheep_movement.gd" id="1_x08my"]
-[ext_resource type="Texture2D" uid="uid://b2t0v0egccrkw" path="res://assets/characters/moutonlambda/spritemoutonWALK1.png" id="2_r40iv"]
-[ext_resource type="Texture2D" uid="uid://cbyyom4cu0i10" path="res://assets/characters/moutonlambda/spritemoutonWALK2.png" id="3_sujtb"]
+[ext_resource type="Script" path="res://scripts/movement/sheep_movement.gd" id="1_hyk0l"]
+[ext_resource type="Texture2D" uid="uid://b2t0v0egccrkw" path="res://assets/characters/moutonlambda/spritemoutonWALK1.png" id="2_jnhdk"]
+[ext_resource type="Texture2D" uid="uid://cbyyom4cu0i10" path="res://assets/characters/moutonlambda/spritemoutonWALK2.png" id="3_58xmv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6x4eo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_r40iv")
+"texture": ExtResource("2_jnhdk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_sujtb")
+"texture": ExtResource("3_58xmv")
 }],
 "loop": true,
 "name": &"default",
@@ -26,7 +26,7 @@ scale = Vector2(0.1, 0.1)
 collision_layer = 2
 motion_mode = 1
 platform_floor_layers = 4294967040
-script = ExtResource("1_x08my")
+script = ExtResource("1_hyk0l")
 
 [node name="SheepPlaceholder" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6x4eo")

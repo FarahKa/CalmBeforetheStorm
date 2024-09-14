@@ -1,13 +1,58 @@
-[gd_scene load_steps=5 format=3 uid="uid://6r7ymcjgtvw2"]
+[gd_scene load_steps=11 format=3 uid="uid://6r7ymcjgtvw2"]
 
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_evwuk"]
 [ext_resource type="Texture2D" uid="uid://6ivssw64oi6i" path="res://assets/backgrounds/map_placeholder.png" id="1_usxbx"]
 [ext_resource type="PackedScene" uid="uid://b32u6fmomjayt" path="res://scenes/player.tscn" id="2_r2vb0"]
 [ext_resource type="PackedScene" uid="uid://ba07js7tksjmk" path="res://scenes/sheep.tscn" id="3_1rmii"]
+[ext_resource type="PackedScene" uid="uid://uriufafemkdi" path="res://scenes/killzone.tscn" id="4_ih5r6"]
+[ext_resource type="Texture2D" uid="uid://dkhoca1vi47tl" path="res://assets/characters/moutonalpha/spritealphamoutonWALK1.png" id="5_1py2r"]
+[ext_resource type="Texture2D" uid="uid://cf1b528ehnvgv" path="res://assets/characters/moutonalpha/spritealphamoutonWALK2.png" id="6_ng3im"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tb8ti"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1py2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ng3im")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jk2oj"]
 size = Vector2(184.5, 11)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_74emq"]
+distance = -62.9775
+
 [node name="Map" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_evwuk")
+
+[node name="Dead" type="Label" parent="GameManager"]
+offset_left = 991.0
+offset_top = 19.0
+offset_right = 1116.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+text = "0 SHEEP LOST"
+
+[node name="GAMEOVER" type="Label" parent="GameManager"]
+visible = false
+z_index = 1
+offset_left = 391.0
+offset_top = 277.0
+offset_right = 724.0
+offset_bottom = 356.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 58
+text = "GAME OVER"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -22,11 +67,71 @@ position = Vector2(579, 330)
 position = Vector2(983, 274)
 scale = Vector2(0.8, 0.8)
 
-[node name="Node" type="Node" parent="."]
+[node name="Labels" type="Node" parent="."]
 
 [node name="Sheepz" type="Node" parent="."]
 
 [node name="Sheep" parent="Sheepz" instance=ExtResource("3_1rmii")]
+
+[node name="SheepPlaceholder" parent="Sheepz/Sheep" index="0"]
+sprite_frames = SubResource("SpriteFrames_tb8ti")
+frame_progress = 0.0
+
+[node name="Sheep10" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(445, 109)
+
+[node name="SheepPlaceholder" parent="Sheepz/Sheep10" index="0"]
+sprite_frames = SubResource("SpriteFrames_tb8ti")
+frame_progress = 0.0
+
+[node name="Sheep11" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(367, 321)
+
+[node name="SheepPlaceholder" parent="Sheepz/Sheep11" index="0"]
+sprite_frames = SubResource("SpriteFrames_tb8ti")
+frame_progress = 0.0
+
+[node name="Sheep12" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(491, 393)
+
+[node name="SheepPlaceholder" parent="Sheepz/Sheep12" index="0"]
+sprite_frames = SubResource("SpriteFrames_tb8ti")
+frame_progress = 0.0
+
+[node name="Sheep13" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(283, 452)
+
+[node name="SheepPlaceholder" parent="Sheepz/Sheep13" index="0"]
+sprite_frames = SubResource("SpriteFrames_tb8ti")
+frame_progress = 0.0
+
+[node name="Sheep14" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(355, 218)
+
+[node name="SheepPlaceholder" parent="Sheepz/Sheep14" index="0"]
+sprite_frames = SubResource("SpriteFrames_tb8ti")
+frame_progress = 0.0
+
+[node name="Sheep15" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(279, 304)
+
+[node name="SheepPlaceholder" parent="Sheepz/Sheep15" index="0"]
+sprite_frames = SubResource("SpriteFrames_tb8ti")
+frame_progress = 0.0
+
+[node name="Sheep16" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(293, 133)
+
+[node name="SheepPlaceholder" parent="Sheepz/Sheep16" index="0"]
+sprite_frames = SubResource("SpriteFrames_tb8ti")
+frame_progress = 0.0
+
+[node name="Sheep17" parent="Sheepz" instance=ExtResource("3_1rmii")]
+position = Vector2(702, 230)
+
+[node name="SheepPlaceholder" parent="Sheepz/Sheep17" index="0"]
+sprite_frames = SubResource("SpriteFrames_tb8ti")
+frame_progress = 0.0
 
 [node name="Sheep2" parent="Sheepz" instance=ExtResource("3_1rmii")]
 position = Vector2(378, 394)
@@ -89,3 +194,46 @@ position = Vector2(-184, 191)
 position = Vector2(187, 111)
 scale = Vector2(-0.0927239, -36.2222)
 shape = SubResource("RectangleShape2D_jk2oj")
+
+[node name="Killzones" type="Node" parent="."]
+
+[node name="KillzoneBottom" parent="Killzones" instance=ExtResource("4_ih5r6")]
+position = Vector2(219, 655)
+
+[node name="Bottom" type="CollisionShape2D" parent="Killzones/KillzoneBottom"]
+position = Vector2(88, -62)
+shape = SubResource("WorldBoundaryShape2D_74emq")
+
+[node name="KillzoneTop" parent="Killzones" instance=ExtResource("4_ih5r6")]
+position = Vector2(219, 655)
+
+[node name="Top" type="CollisionShape2D" parent="Killzones/KillzoneTop"]
+position = Vector2(88, -594)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_74emq")
+
+[node name="KillzoneLeft" parent="Killzones" instance=ExtResource("4_ih5r6")]
+position = Vector2(219, 655)
+
+[node name="Left" type="CollisionShape2D" parent="Killzones/KillzoneLeft"]
+position = Vector2(-157, -98)
+rotation = 1.57199
+shape = SubResource("WorldBoundaryShape2D_74emq")
+
+[node name="KillzoneRight" parent="Killzones" instance=ExtResource("4_ih5r6")]
+position = Vector2(219, 655)
+
+[node name="Right" type="CollisionShape2D" parent="Killzones/KillzoneRight"]
+position = Vector2(874, -139)
+rotation = 4.7027
+shape = SubResource("WorldBoundaryShape2D_74emq")
+
+[editable path="Sheepz/Sheep"]
+[editable path="Sheepz/Sheep10"]
+[editable path="Sheepz/Sheep11"]
+[editable path="Sheepz/Sheep12"]
+[editable path="Sheepz/Sheep13"]
+[editable path="Sheepz/Sheep14"]
+[editable path="Sheepz/Sheep15"]
+[editable path="Sheepz/Sheep16"]
+[editable path="Sheepz/Sheep17"]
