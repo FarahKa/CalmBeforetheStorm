@@ -15,7 +15,7 @@ func _ready() -> void:
 	
 	
 func _process(delta: float) -> void:
-	print(timer.time_left)
+	#print(timer.time_left)
 	time_left.text=(str(int(timer.time_left)) + " SECONDS BEFORE THE STORM")
 	if timer.time_left == 5:
 		Engine.time_scale = 0.5
@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 
 func add_death():
 	dead_nb += 1
-	print(dead_nb)
+	#print(dead_nb)
 	dead.text=str(dead_nb) + " SHEEP DIED"
 	if dead_nb == max:
 		print("game over")

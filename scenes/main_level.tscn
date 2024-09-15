@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=26 format=3 uid="uid://6r7ymcjgtvw2"]
-
+[gd_scene load_steps=28 format=3 uid="uid://6r7ymcjgtvw2"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_evwuk"]
 [ext_resource type="Texture2D" uid="uid://bjsplvoybi4nm" path="res://assets/backgrounds/clouds/cloud1.png" id="2_pi265"]
@@ -12,16 +10,16 @@
 [ext_resource type="Texture2D" uid="uid://dkhoca1vi47tl" path="res://assets/characters/moutonalpha/spritealphamoutonWALK1.png" id="5_1py2r"]
 [ext_resource type="Texture2D" uid="uid://bjox3klbdm4oo" path="res://assets/backgrounds/clouds/cloud4.png" id="5_odoby"]
 [ext_resource type="Texture2D" uid="uid://cf1b528ehnvgv" path="res://assets/characters/moutonalpha/spritealphamoutonWALK2.png" id="6_ng3im"]
-[ext_resource type="AudioStream" uid="uid://b60vnvdovl7hy" path="res://assets/sounds/sheep-pixabay.mp3" id="8_ad4dk"]
 [ext_resource type="Texture2D" uid="uid://cpqisfwxotics" path="res://assets/backgrounds/clouds/cloud5.png" id="6_oxhj4"]
 [ext_resource type="Texture2D" uid="uid://cor4v6yslr0u" path="res://assets/backgrounds/clouds/cloud6.png" id="7_irqth"]
+[ext_resource type="AudioStream" uid="uid://wml8tso06rws" path="res://assets/sounds/sheep-pixabay.mp3" id="8_ad4dk"]
 [ext_resource type="Texture2D" uid="uid://y7mijeq20xgf" path="res://assets/backgrounds/clouds/cloud7.png" id="8_y6cxy"]
 [ext_resource type="Texture2D" uid="uid://otw4ukuptovw" path="res://assets/backgrounds/clouds/cloud8.png" id="9_25bp2"]
 [ext_resource type="Texture2D" uid="uid://cqlrwl7el6rne" path="res://assets/backgrounds/clouds/cloud9.png" id="10_6q7qj"]
 [ext_resource type="Texture2D" uid="uid://dqjgm0gs008nd" path="res://assets/backgrounds/clouds/cloud10.png" id="11_pwur0"]
 [ext_resource type="Texture2D" uid="uid://cb8mubqeotu0e" path="res://assets/backgrounds/clouds/cloud11.png" id="12_1t2vq"]
 [ext_resource type="Texture2D" uid="uid://c13epi8d1anmg" path="res://assets/backgrounds/clouds/cloud12.png" id="13_fycvi"]
-[ext_resource type="Texture2D" uid="uid://c542d7iu52acb" path="res://assets/backgrounds/MapbasIC.png" id="14_j08w7"]
+[ext_resource type="Texture2D" uid="uid://di5qbbskj54os" path="res://assets/backgrounds/MapbasIC.png" id="14_j08w7"]
 
 [sub_resource type="Animation" id="Animation_vj6p1"]
 length = 0.001
@@ -372,6 +370,20 @@ _data = {
 "cloud": SubResource("Animation_8q6w6")
 }
 
+[sub_resource type="GDScript" id="GDScript_l1r3v"]
+script/source = "extends Camera2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	print(get_viewport_rect().size)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_tb8ti"]
 animations = [{
 "frames": [{
@@ -536,6 +548,7 @@ texture = ExtResource("14_j08w7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(579, 330)
+script = SubResource("GDScript_l1r3v")
 
 [node name="Dog" parent="." instance=ExtResource("2_r2vb0")]
 position = Vector2(983, 274)
