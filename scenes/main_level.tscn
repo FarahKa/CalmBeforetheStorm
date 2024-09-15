@@ -411,19 +411,19 @@ unique_name_in_owner = true
 script = ExtResource("1_evwuk")
 
 [node name="Dead" type="Label" parent="GameManager"]
-offset_left = 991.0
+offset_left = 980.0
 offset_top = 19.0
-offset_right = 1116.0
+offset_right = 1136.0
 offset_bottom = 46.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 19
 text = "0 SHEEP LOST"
 
 [node name="TimeLeft" type="Label" parent="GameManager"]
-offset_left = 817.0
-offset_top = 55.0
-offset_right = 1121.0
-offset_bottom = 82.0
+offset_left = 768.0
+offset_top = 53.0
+offset_right = 1141.0
+offset_bottom = 80.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 19
 text = "XX SECONDS BEFORE THE STORM"
@@ -547,7 +547,7 @@ scale = Vector2(0.412207, 0.412207)
 texture = ExtResource("14_j08w7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(579, 330)
+position = Vector2(578, 324)
 script = SubResource("GDScript_l1r3v")
 
 [node name="Dog" parent="." instance=ExtResource("2_r2vb0")]

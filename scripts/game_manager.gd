@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 func add_death():
 	dead_nb += 1
 	#print(dead_nb)
-	dead.text=str(dead_nb) + " SHEEP DIED"
+	dead.text=str(dead_nb) + " SHEEP LOST"
 	if dead_nb == max:
 		print("game over")
 		gameover.visible = true
